@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="userform.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class=container>
+        <form id="form" action="">
+            <h1>Responsive Registration <br> Form</h1>
+            <div class="input-control">
+                <span class="icon">
+                    <i class="fa fa-envelope"></i>
+                </span>
+                <input type="text" name="email" id="email" placeholder="Email">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <input type="password" name="password" id="password" placeholder="Password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <span class="icon">
+                    <i class="fa fa-user"></i>
+                </span>
+                <input type="password" name="password2" id="password2" placeholder="Re password">
+                <div class="error"></div>
+            </div>
+
+
+            <div class="user-name">
+                <div class="fname">
+                    <span class="icon">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <input type="text" name="fname" id="fname" placeholder="first Name">
+                    <div class="error"></div>
+                </div>
+                <div class="lname">
+                    <span class="icon">
+                        <i class="fa fa-user"></i>
+                    </span>
+                    <input type="text" name="lname" id="lname" placeholder="last Name">
+                    <div class="error"></div>
+                </div>
+            </div>
+
+            <div class="input-control">
+                <span class="icon">
+                    <i class="fa fa-phone"></i>
+                </span>
+                <input type="number" name="phonenumber" id="phonenumber" placeholder="Phonenumber">
+                <div class="error"></div>
+            </div>
+
+            <div class="genders">
+                <input type="radio" id="gender1" name="person" value="male"> Male </input>
+                <!-- <input type="radio" id="gender2" name="person" value="female"> Female </input>  -->
+                 <div class="error"></div>
+            </div>
+
+            <div class="input-control">
+
+                <select name="country" id="country">
+                    <option selected hidden>select country</option>
+                    <option value="IND">India</option>
+                    <option value="AX">Aland Islands</option>
+                    <option value="AL">Albania</option>
+                    <option value="DZ">Algeria</option>
+                    <option value="AS">American Samoa</option>
+                </select>
+                <div class="error"></div>
+            </div>
+
+            <div class="agreement">
+                <input type="checkbox" id="agree" name="agree" value="agree">
+                <label for="agree"> I agree with terms and conditions</label>
+            </div>
+
+            <div class="agreement">
+                <input type="checkbox" id="newsletter" name="agree" value="news-letter">
+                <label for="newsletter"> I want receive the newsletter </label>
+            </div>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="form.js"> </script>
+</body>
+
+</html>
