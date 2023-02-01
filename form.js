@@ -5,10 +5,7 @@ const password2 = document.getElementById("password2");
 const fname = document.getElementById("fname");
 const lname = document.getElementById("lname");
 const phonenumber = document.getElementById("phonenumber");
-const c = document.getElementById("country");
-const gender1 = document.getElementById("gender1");
-const gender2 = document.getElementById("gender2");
-// const gender = document.querySelector('input[name="person"]:checked')
+const country = document.getElementById("country");
 
 
 form.addEventListener('submit', e => {
@@ -24,15 +21,13 @@ function validateInput() {
     const fnameValue = fname.value.trim();
     const lnameValue = lname.value.trim();
     const contact = phonenumber.value.trim();
-    const country = c.value.trim();
-    const genders1 = gender1.value.trim();
-    const genders2 = gender2.value.trim();
- 
+    const countries = country.value.trim();
+    const gender = document.querySelectorAll('input[name="person"]:checked');
 
     if (emailValue === '') {
         setError(email, 'email is requied');
     } else if (!isValidEmail(emailValue)) {
-        setError(email,'enter the valid email');
+        setError(email, 'enter the valid email');
     }
 
     else {
@@ -47,7 +42,7 @@ function validateInput() {
     if (passwordValue === '') {
         setError(password, 'Password is requied');
     } else if (!isValidPassword(password) && passwordValue.length < 8) {
-        setError(password, ' Password must be a minimum of 8 characters including number, Upper, Lower And one special character');
+        setError(password, 'Password must be a minimum of 8 characters including number, Upper, Lower And one special character');
     }
     else {
         setSuccess(password);
@@ -69,38 +64,62 @@ function validateInput() {
     }
     if (fnameValue === '') {
         setError(fname, 'firstname is requied cannot be blank');
-    } else {
+    } else if(!isValidName(fname)){
+        setError(fname, 'only letters');
+    }else {
         setSuccess(fname);
     }
+
     if (lnameValue === '') {
         setError(lname, 'lastname is requied cannot be blank');
+    } else if (!isValidlName(lname)) {
+        setError(lname, 'only letters');
     } else {
         setSuccess(lname);
+    }
+
+
+    function isValidName(fname) {
+        const letters = /^[A-Za-z]+[ A-Za-z]{1,20}$/;
+        return re.test(fname);
+    }
+    function isValidlName(lname) {
+        const letters = /^[A-Za-z]+[ A-Za-z]{1,20}$/;
+        return re.test(lname);
     }
     if (contact === '') {
         setError(phonenumber, 'phonenumber is requied cannot be blank');
     } else {
         setSuccess(phonenumber);
     }
- 
-    if (country === "" || country === "select country") {
-        setError(c,'select a country')
+function c() {
+    const letters = /^[A-Za-z]+[ A-Za-z]{1,20}$/;
+}
+
+
+   
+
+    if (countries === "" || countries === "select country") {
+        setError(country, 'select a country')
     } else {
-        setSuccess(c);
+        setSuccess(country);
     }
 
-    if (!genders1.checked) {
-        setError(gender1, 'select a gender');
+    if (document.getElementById("agree").checked) {
+        document.getElementById("agreement").innerHTML = '';
+
     } else {
-        setSucces(gender1);
+        document.getElementById("agreement").innerHTML = "select terms and condition";
     }
- 
-    if (!genders2.checked) {
-        setError(gender2, 'select a gender');
-    } else {
-        setSucces(gender2);
+
+    if (!gender.length) {
+         document.getElementById("disp").innerHTML = "select a gender";
     }
-}  
+    else {
+        document.getElementById("disp").innerHTML = '';
+    }
+
+}
 
 function setError(element, message) {
     const inputControl = element.parentElement;

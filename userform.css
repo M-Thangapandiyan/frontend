@@ -33,6 +33,7 @@
     border-bottom: none;
     border-top: none;
     border-left: none;
+    color: black;
 }
 
 .input-control {
@@ -67,14 +68,15 @@
     outline: 0;
 }
 
-.input-control.success #country option{
+.input-control.success #country option {
     border-color: rgb(139, 230, 139);
+
 }
 
-.input-control.error #country option{
+.input-control.error #country option {
     border-color: rgb(247, 97, 11);
-}
 
+}
 
 .user-name {
     display: flex;
@@ -92,13 +94,20 @@
     margin-left: auto;
 }
 
-.fname.success input, .lname.success input, .input-control.success select {
+.fname.success input,
+.lname.success input,
+.input-control.success select {
     border-color: rgb(139, 230, 139);
+
 }
 
-.fname.error input , .lname.error input ,.input-control.error select {
+.fname.error input,
+.lname.error input,
+.input-control.error select {
     border-color: rgb(235, 62, 5);
+
 }
+
 .genders {
     margin-top: 5px;
     font-size: large;
@@ -114,4 +123,23 @@
     font-size: 20px;
     margin: 10px;
 
+}
+
+.error {
+    font-size: 15px;
+    color: red;
+    padding-left: 5px;
+   
+}
+
+#disp {
+    font-size: 15px;
+    color: rgb(232, 70, 70);
+    padding-left: 5px;
+}
+
+#agreement {
+    font-size: 15px;
+    color: red;
+    padding-left: 5px;
 }

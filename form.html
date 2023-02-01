@@ -64,8 +64,9 @@
 
             <div class="genders">
                 <input type="radio" id="gender1" name="person" value="male"> Male </input>
-                <!-- <input type="radio" id="gender2" name="person" value="female"> Female </input>  -->
-                 <div class="error"></div>
+                <input type="radio" id="gender2" name="person" value="female"> Female </input>  
+                <div id="disp" >
+            </div>
             </div>
 
             <div class="input-control">
@@ -77,13 +78,15 @@
                     <option value="AL">Albania</option>
                     <option value="DZ">Algeria</option>
                     <option value="AS">American Samoa</option>
-                </select>
-                <div class="error"></div>
+                </select> 
+                <span class="error"></span>
+               
             </div>
 
             <div class="agreement">
-                <input type="checkbox" id="agree" name="agree" value="agree">
+                <input type="checkbox" id="agree" name="agree" value="terms and conditions">
                 <label for="agree"> I agree with terms and conditions</label>
+                <div id="agreement"> </div>
             </div>
 
             <div class="agreement">
